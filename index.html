@@ -1,183 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>YouTube Creator Guide</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Animate.css for beautiful entry effects -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  <style>
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background: linear-gradient(120deg, #f9e7aa 0%, #f7fafc 60%, #e62117 100%); }
-    header {
-      background: linear-gradient(90deg, #e62117 60%, #fce438 100%);
-      color: #fff;
-      padding: 48px 0 24px;
-      text-align: center;
-      border-bottom-left-radius: 40px;
-      border-bottom-right-radius: 40px;
-      box-shadow: 0 8px 32px #eaeaea;
-    }
-    nav {
-      background: #fff;
-      box-shadow: 0 2px 6px #eaeaea;
-      border-radius: 0 0 20px 20px;
-    }
-    nav ul {
-      display: flex;
-      justify-content: center;
-      padding: 0;
-      margin: 0;
-      list-style: none;
-      flex-wrap: wrap;
-    }
-    nav li {
-      margin: 0 20px;
-      transition: transform 0.2s;
-    }
-    nav a {
-      text-decoration: none;
-      color: #e62117;
-      font-weight: bold;
-      font-size: 18px;
-      padding: 12px 0;
-      transition: color 0.2s;
-    }
-    nav a:hover {
-      color: #fce438;
-      text-shadow: 0 2px 8px #e62117;
-      transform: scale(1.08);
-    }
-    section {
-      max-width: 900px;
-      margin: 32px auto;
-      padding: 24px;
-      background: rgba(255,255,255,0.92);
-      border-radius: 28px;
-      box-shadow: 0 4px 18px #eaeaea;
-      animation: fadeIn 1.2s;
-    }
-    h2 { color: #e62117; margin-top: 0; }
-    .card {
-      background: linear-gradient(120deg,#fffbe8 50%, #f6fafe 100%);
-      padding: 20px;
-      margin: 18px 0;
-      border-radius: 14px;
-      box-shadow: 0 3px 10px #edecec;
-      transition: box-shadow 0.2s, transform 0.2s;
-    }
-    .card:hover {
-      box-shadow: 0 6px 24px #e62117;
-      transform: scale(1.02);
-    }
-    .btn {
-      background: linear-gradient(90deg, #e62117, #fce438);
-      color: #fff;
-      border: none;
-      padding: 12px 26px;
-      border-radius: 10px;
-      cursor: pointer;
-      font-size: 17px;
-      margin-top: 12px;
-      box-shadow: 0 2px 4px #fce438;
-      transition: background 0.2s, transform 0.2s;
-    }
-    .btn:hover {
-      background: linear-gradient(90deg, #fce438, #e62117);
-      transform: scale(1.07);
-    }
-    /* Progress bars */
-    .progressbar-container { margin-bottom: 20px; }
-    .progress-label { margin-top: 20px; color: #333; font-weight: 600; }
-    .progress-bar {
-      width: 100%; height: 24px; background: #eee; border-radius: 12px; overflow: hidden; margin-bottom: 9px;
-      box-shadow: 0 2px 6px #fce438;
-    }
-    .progress {
-      height: 100%;
-      background: linear-gradient(90deg, #e62117 40%, #fce438 90%);
-      width: 0;
-      border-radius: 12px;
-      animation: progressGrow 2s forwards;
-    }
-    /* Keyframe for progress bar animations */
-    @keyframes progressGrow {
-      from { width: 0; }
-      to { width: var(--progress-width); }
-    }
-    /* Easy fade in animation for sections */
-    @keyframes fadeIn {
-      0% { opacity:0; transform:translateY(40px);}
-      100% { opacity:1; transform:translateY(0);}
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Physique Transformation Guide</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background: #f0f3f7;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #27ae60;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+            font-size: 1.8em;
+            font-weight: bold;
+            letter-spacing: 0.1em;
+        }
+        nav {
+            background: #2ecc71;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 600;
+            transition: color 0.3s ease-in-out;
+        }
+        nav a:hover {
+            color: #145214;
+        }
+        section {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 15px;
+            background: white;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        h2 {
+            border-bottom: 3px solid #27ae60;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        ul {
+            list-style: inside disc;
+            margin-left: 15px;
+        }
+        .plan {
+            border: 2px solid #27ae60;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            background-color: #dff0d8;
+        }
+        .plan h3 {
+            color: #2c662d;
+            margin-top: 0;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #27ae60;
+            color: white;
+            font-weight: 600;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background-color: #145214;
+        }
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background: #27ae60;
+            color: white;
+            font-size: 0.9em;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
-  <header class="animate__animated animate__fadeInDown">
-    <h1 style="font-size:2.8em;">YouTube Creator Guide 🚀</h1>
-    <p style="font-size:1.3em;">Start your channel, track your journey, and master YouTube from zero to hero!</p>
-  </header>
-  <nav>
+
+<header>Physique Transformation Guide</header>
+
+<nav>
+    <a href="#workout">Workout</a>
+    <a href="#diet">Diet</a>
+    <a href="#supplements">Supplements</a>
+    <a href="#tips">Tips</a>
+    <a href="#plans">Plans</a>
+</nav>
+
+<section id="workout">
+    <h2>Gym Workout Basics to Pro</h2>
+    <p>Start your fitness journey with plans progressing from beginner to intermediate to advanced. Focus on consistency and correct form.</p>
     <ul>
-      <li><a href="#start">Start</a></li>
-      <li><a href="#progress">Progress</a></li>
-      <li><a href="#tutorials">Tutorials</a></li>
-      <li><a href="#resources">Resources</a></li>
-      <li><a href="#community">Community</a></li>
+        <li><strong>Basic:</strong> Full body workouts 3 days a week</li>
+        <li><strong>Intermediate:</strong> Split routines 4-5 days a week</li>
+        <li><strong>Pro:</strong> Advanced hypertrophy and strength cycles 5-6 days a week</li>
     </ul>
-  </nav>
-  <section id="start">
-    <h2>Get Started</h2>
-    <div class="card animate__animated animate__fadeInLeft">
-      <p>Learn how to set up your YouTube channel, personalize your page, and publish your first video step-by-step.</p>
-      <button class="btn">Begin Your Journey</button>
+</section>
+
+<section id="diet">
+    <h2>Diet Fundamentals</h2>
+    <p>Nutrition is crucial for transformation. Tailor your macros and calories to your goals.</p>
+    <ul>
+        <li>High protein intake to support muscle growth</li>
+        <li>Balanced carbohydrates for energy</li>
+        <li>Healthy fats for hormone balance</li>
+        <li>Hydration and micronutrient focus</li>
+    </ul>
+</section>
+
+<section id="supplements">
+    <h2>Recommended Supplements</h2>
+    <p>Supplements can aid but are not substitutes for diet and training.</p>
+    <ul>
+        <li>Protein powders (whey, plant-based)</li>
+        <li>Creatine monohydrate</li>
+        <li>Multivitamins</li>
+        <li>Omega-3 fatty acids</li>
+        <li>Pre-workout (optional)</li>
+    </ul>
+</section>
+
+<section id="tips">
+    <h2>Helpful Tips</h2>
+    <ul>
+        <li>Track your progress regularly</li>
+        <li>Rest and recover properly</li>
+        <li>Set realistic goals</li>
+        <li>Adapt your plan based on results</li>
+        <li>Stay motivated with community support</li>
+    </ul>
+</section>
+
+<section id="plans">
+    <h2>Choose Your Plan</h2>
+
+    <div class="plan">
+        <h3>Basic Plan - Free</h3>
+        <p>Access to beginner workout templates, diet basics, and essential tips.</p>
+        <a href="#" class="btn">Get Started</a>
     </div>
-  </section>
-  <section id="progress">
-    <h2>Your YouTube Progress</h2>
-    <div class="progressbar-container">
-      <div class="progress-label">Beginner</div>
-      <div class="progress-bar">
-        <div class="progress" style="--progress-width: 30%;"></div>
-      </div>
-      <div class="progress-label">Intermediate</div>
-      <div class="progress-bar">
-        <div class="progress" style="--progress-width: 60%;"></div>
-      </div>
-      <div class="progress-label">Advanced</div>
-      <div class="progress-bar">
-        <div class="progress" style="--progress-width: 90%;"></div>
-      </div>
+
+    <div class="plan">
+        <h3>Pro Plan - ₹10</h3>
+        <p>Includes personalized workout and diet plans, supplement guides, video tutorials, and advanced transformation strategies.</p>
+        <a href="#" class="btn">Buy Now</a>
     </div>
-  </section>
-  <section id="tutorials">
-    <h2>Step-by-Step Tutorials</h2>
-    <div class="card animate__animated animate__zoomIn">
-      <ul>
-        <li>Creating Your Channel from Scratch</li>
-        <li>Branding: Name, Logo, Channel Art</li>
-        <li>Filming & Editing Videos</li>
-        <li>Upload Settings & SEO Tricks</li>
-        <li>Monetization Basics & Growth Hacks</li>
-      </ul>
-    </div>
-  </section>
-  <section id="resources">
-    <h2>Creator Resources</h2>
-    <div class="card animate__animated animate__fadeInUp">
-      <ul>
-        <li>Thumbnail & Banner Templates</li>
-        <li>Best (free) Video Editing Tools</li>
-        <li>Copyright-Free Music & Sound Effects</li>
-        <li>Descriptive Script Samples</li>
-      </ul>
-    </div>
-  </section>
-  <section id="community">
-    <h2>Community & Discussion</h2>
-    <div class="card animate__animated animate__pulse">
-      <p>Ask questions, share your wins, and discuss with fellow creators just like you!</p>
-    </div>
-  </section>
+</section>
+
+<footer>
+    &copy; 2025 Physique Transformation Guide. All rights reserved.
+</footer>
+
 </body>
 </html>
