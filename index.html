@@ -11,6 +11,7 @@
             background: #f0f3f7;
             color: #333;
             line-height: 1.6;
+            scroll-behavior: smooth;
         }
         header {
             background-color: #27ae60;
@@ -36,7 +37,10 @@
             text-decoration: none;
             margin: 0 20px;
             font-weight: 600;
-            transition: color 0.3s ease-in-out;
+            transition: color 0.3s ease-in-out, transform 0.1s ease-in-out;
+        }
+        nav a:active {
+            transform: scale(0.95);
         }
         nav a:hover {
             color: #145214;
@@ -44,10 +48,11 @@
         section {
             max-width: 900px;
             margin: 20px auto;
-            padding: 0 15px;
+            padding: 0 15px 20px 15px;
             background: white;
             box-shadow: 0 3px 10px rgba(0,0,0,0.1);
             border-radius: 8px;
+            overflow: hidden;
         }
         h2 {
             border-bottom: 3px solid #27ae60;
@@ -58,12 +63,25 @@
             list-style: inside disc;
             margin-left: 15px;
         }
+        .section-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 3px solid #27ae60;
+            margin-bottom: 10px;
+        }
         .plan {
             border: 2px solid #27ae60;
             padding: 15px;
             border-radius: 8px;
             margin-bottom: 30px;
             background-color: #dff0d8;
+            transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            cursor: pointer;
+        }
+        .plan:active {
+            transform: scale(0.97);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
         .plan h3 {
             color: #2c662d;
@@ -77,11 +95,14 @@
             font-weight: 600;
             border-radius: 5px;
             text-decoration: none;
-            transition: background-color 0.3s ease-in-out;
+            transition: background-color 0.3s ease-in-out, transform 0.1s ease-in-out;
             margin-top: 10px;
         }
         .btn:hover {
             background-color: #145214;
+        }
+        .btn:active {
+            transform: scale(0.95);
         }
         footer {
             text-align: center;
@@ -106,6 +127,10 @@
 </nav>
 
 <section id="workout">
+    <!-- Gym workout image -->
+    <img class="section-img"
+         src="https://images.unsplash.com/photo-1517832207067-4db24a2ae47c?auto=format&fit=crop&w=1200&q=80"
+         alt="People working out in a gym">
     <h2>Gym Workout Basics to Pro</h2>
     <p>Start your fitness journey with plans progressing from beginner to intermediate to advanced. Focus on consistency and correct form.</p>
     <ul>
@@ -116,6 +141,10 @@
 </section>
 
 <section id="diet">
+    <!-- Healthy food image -->
+    <img class="section-img"
+         src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1200&q=80"
+         alt="Healthy food and vegetables">
     <h2>Diet Fundamentals</h2>
     <p>Nutrition is crucial for transformation. Tailor your macros and calories to your goals.</p>
     <ul>
@@ -127,6 +156,10 @@
 </section>
 
 <section id="supplements">
+    <!-- Supplements image -->
+    <img class="section-img"
+         src="https://images.unsplash.com/photo-1593095948071-474c5cc2989d?auto=format&fit=crop&w=1200&q=80"
+         alt="Gym supplements and protein shaker">
     <h2>Recommended Supplements</h2>
     <p>Supplements can aid but are not substitutes for diet and training.</p>
     <ul>
@@ -139,6 +172,10 @@
 </section>
 
 <section id="tips">
+    <!-- Motivation / tips image -->
+    <img class="section-img"
+         src="https://images.unsplash.com/photo-1554344058-8d1d1dbc5960?auto=format&fit=crop&w=1200&q=80"
+         alt="Fitness motivation and workout planning">
     <h2>Helpful Tips</h2>
     <ul>
         <li>Track your progress regularly</li>
@@ -150,6 +187,10 @@
 </section>
 
 <section id="plans">
+    <!-- Plans / pricing image -->
+    <img class="section-img"
+         src="https://images.unsplash.com/photo-1526401485004-2fa806b5e2ab?auto=format&fit=crop&w=1200&q=80"
+         alt="Fitness planning and notebook">
     <h2>Choose Your Plan</h2>
 
     <div class="plan">
