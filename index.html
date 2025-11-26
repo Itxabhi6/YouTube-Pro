@@ -1,118 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Physique Transformation Guide</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            background: #f0f3f7;
-            color: #333;
-            line-height: 1.6;
-            scroll-behavior: smooth;
-        }
-        header {
-            background-color: #27ae60;
-            color: white;
-            padding: 1em 0;
-            text-align: center;
-            font-size: 1.8em;
-            font-weight: bold;
-            letter-spacing: 0.1em;
-        }
-        nav {
-            background: #2ecc71;
-            display: flex;
-            justify-content: center;
-            padding: 10px 0;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 20px;
-            font-weight: 600;
-            transition: color 0.3s ease-in-out, transform 0.1s ease-in-out;
-        }
-        nav a:active {
-            transform: scale(0.95);
-        }
-        nav a:hover {
-            color: #145214;
-        }
-        section {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 0 15px 20px 15px;
-            background: white;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        h2 {
-            border-bottom: 3px solid #27ae60;
-            padding-bottom: 10px;
-            margin-bottom: 15px;
-        }
-        ul {
-            list-style: inside disc;
-            margin-left: 15px;
-        }
-        .section-img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            border-bottom: 3px solid #27ae60;
-            margin-bottom: 10px;
-        }
-        .plan {
-            border: 2px solid #27ae60;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            background-color: #dff0d8;
-            transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-            cursor: pointer;
-        }
-        .plan:active {
-            transform: scale(0.97);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        }
-        .plan h3 {
-            color: #2c662d;
-            margin-top: 0;
-        }
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #27ae60;
-            color: white;
-            font-weight: 600;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s ease-in-out, transform 0.1s ease-in-out;
-            margin-top: 10px;
-        }
-        .btn:hover {
-            background-color: #145214;
-        }
-        .btn:active {
-            transform: scale(0.95);
-        }
-        footer {
-            text-align: center;
-            padding: 15px 0;
-            background: #27ae60;
-            color: white;
-            font-size: 0.9em;
-            margin-top: 40px;
-        }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Physique Transformation Guide</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background: #f0f3f7;
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+  }
+  header {
+    background-color: #27ae60;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+  }
+  nav {
+    background: #2ecc71;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out, transform 0.1s ease-in-out;
+  }
+  nav a:active {
+    transform: scale(0.95);
+  }
+  nav a:hover {
+    color: #145214;
+  }
+  section {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 15px 20px 15px;
+    background: white;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  h2 {
+    border-bottom: 3px solid #27ae60;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+  }
+  ul {
+    list-style: inside disc;
+    margin-left: 15px;
+  }
+  .section-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 3px solid #27ae60;
+    margin-bottom: 10px;
+  }
+  .plan {
+    border: 2px solid #27ae60;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    background-color: #dff0d8;
+    transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    cursor: pointer;
+  }
+  .plan:active {
+    transform: scale(0.97);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  .plan h3 {
+    color: #2c662d;
+    margin-top: 0;
+  }
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #27ae60;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out, transform 0.1s ease-in-out;
+    margin-top: 10px;
+  }
+  .btn:hover {
+    background-color: #145214;
+  }
+  .btn:active {
+    transform: scale(0.95);
+  }
+  footer {
+    text-align: center;
+    padding: 15px 0;
+    background: #27ae60;
+    color: white;
+    font-size: 0.9em;
+    margin-top: 40px;
+  }
+
+  /* Modal styling */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+  }
+  .modal {
+    background: white;
+    width: 320px;
+    max-width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    padding: 20px;
+    position: relative;
+    font-size: 0.9em;
+  }
+  .modal h3 {
+    margin-top: 0;
+    color: #27ae60;
+  }
+  .modal form {
+    display: flex;
+    flex-direction: column;
+  }
+  .modal label {
+    margin: 10px 0 5px 0;
+  }
+  .modal input[type="text"],
+  .modal input[type="email"],
+  .modal input[type="password"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .modal button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  .modal button:hover {
+    background-color: #145214;
+  }
+  .close-btn {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 1.2em;
+    color: #888;
+    cursor: pointer;
+  }
+  .close-btn:hover {
+    color: #27ae60;
+  }
+  .form-switch {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 0.85em;
+  }
+  .form-switch a {
+    cursor: pointer;
+    color: #27ae60;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .form-switch a:hover {
+    text-decoration: underline;
+  }
+</style>
 </head>
 <body>
 
@@ -126,89 +206,155 @@
     <a href="#plans">Plans</a>
 </nav>
 
+<!-- Modal popup for login/signup -->
+<div id="authModal" class="modal-overlay">
+  <div class="modal" id="loginForm">
+    <span class="close-btn" id="closeModal">&times;</span>
+    <h3>Login</h3>
+    <form onsubmit="event.preventDefault(); alert('Login functionality not implemented'); closeModal();">
+      <label for="loginEmail">Email</label>
+      <input type="email" id="loginEmail" required />
+      <label for="loginPass">Password</label>
+      <input type="password" id="loginPass" required />
+      <button type="submit">Login</button>
+    </form>
+    <div class="form-switch">
+      Don't have an account? <a id="showSignup">Sign up</a>
+    </div>
+  </div>
+
+  <div class="modal" id="signupForm" style="display:none;">
+    <span class="close-btn" id="closeModal2">&times;</span>
+    <h3>Sign Up</h3>
+    <form onsubmit="event.preventDefault(); alert('Signup functionality not implemented'); closeModal();">
+      <label for="signupName">Full Name</label>
+      <input type="text" id="signupName" required />
+      <label for="signupEmail">Email</label>
+      <input type="email" id="signupEmail" required />
+      <label for="signupPass">Password</label>
+      <input type="password" id="signupPass" required />
+      <button type="submit">Sign Up</button>
+    </form>
+    <div class="form-switch">
+      Already have an account? <a id="showLogin">Login</a>
+    </div>
+  </div>
+</div>
+
 <section id="workout">
-    <!-- Gym workout image -->
-    <img class="section-img"
-         src="https://images.unsplash.com/photo-1517832207067-4db24a2ae47c?auto=format&fit=crop&w=1200&q=80"
-         alt="People working out in a gym">
-    <h2>Gym Workout Basics to Pro</h2>
-    <p>Start your fitness journey with plans progressing from beginner to intermediate to advanced. Focus on consistency and correct form.</p>
-    <ul>
-        <li><strong>Basic:</strong> Full body workouts 3 days a week</li>
-        <li><strong>Intermediate:</strong> Split routines 4-5 days a week</li>
-        <li><strong>Pro:</strong> Advanced hypertrophy and strength cycles 5-6 days a week</li>
-    </ul>
+  <img class="section-img"
+       src="https://images.unsplash.com/photo-1517832207067-4db24a2ae47c?auto=format&fit=crop&w=1200&q=80"
+       alt="People working out in a gym" />
+  <h2>Gym Workout Basics to Pro</h2>
+  <p>Start your fitness journey with plans progressing from beginner to intermediate to advanced. Focus on consistency and correct form.</p>
+  <ul>
+    <li><strong>Basic:</strong> Full body workouts 3 days a week</li>
+    <li><strong>Intermediate:</strong> Split routines 4-5 days a week</li>
+    <li><strong>Pro:</strong> Advanced hypertrophy and strength cycles 5-6 days a week</li>
+  </ul>
 </section>
 
 <section id="diet">
-    <!-- Healthy food image -->
-    <img class="section-img"
-         src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1200&q=80"
-         alt="Healthy food and vegetables">
-    <h2>Diet Fundamentals</h2>
-    <p>Nutrition is crucial for transformation. Tailor your macros and calories to your goals.</p>
-    <ul>
-        <li>High protein intake to support muscle growth</li>
-        <li>Balanced carbohydrates for energy</li>
-        <li>Healthy fats for hormone balance</li>
-        <li>Hydration and micronutrient focus</li>
-    </ul>
+  <img class="section-img"
+       src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1200&q=80"
+       alt="Healthy food and vegetables" />
+  <h2>Diet Fundamentals</h2>
+  <p>Nutrition is crucial for transformation. Tailor your macros and calories to your goals.</p>
+  <ul>
+    <li>High protein intake to support muscle growth</li>
+    <li>Balanced carbohydrates for energy</li>
+    <li>Healthy fats for hormone balance</li>
+    <li>Hydration and micronutrient focus</li>
+  </ul>
 </section>
 
 <section id="supplements">
-    <!-- Supplements image -->
-    <img class="section-img"
-         src="https://images.unsplash.com/photo-1593095948071-474c5cc2989d?auto=format&fit=crop&w=1200&q=80"
-         alt="Gym supplements and protein shaker">
-    <h2>Recommended Supplements</h2>
-    <p>Supplements can aid but are not substitutes for diet and training.</p>
-    <ul>
-        <li>Protein powders (whey, plant-based)</li>
-        <li>Creatine monohydrate</li>
-        <li>Multivitamins</li>
-        <li>Omega-3 fatty acids</li>
-        <li>Pre-workout (optional)</li>
-    </ul>
+  <img class="section-img"
+       src="https://images.unsplash.com/photo-1593095948071-474c5cc2989d?auto=format&fit=crop&w=1200&q=80"
+       alt="Gym supplements and protein shaker" />
+  <h2>Recommended Supplements</h2>
+  <p>Supplements can aid but are not substitutes for diet and training.</p>
+  <ul>
+    <li>Protein powders (whey, plant-based)</li>
+    <li>Creatine monohydrate</li>
+    <li>Multivitamins</li>
+    <li>Omega-3 fatty acids</li>
+    <li>Pre-workout (optional)</li>
+  </ul>
 </section>
 
 <section id="tips">
-    <!-- Motivation / tips image -->
-    <img class="section-img"
-         src="https://images.unsplash.com/photo-1554344058-8d1d1dbc5960?auto=format&fit=crop&w=1200&q=80"
-         alt="Fitness motivation and workout planning">
-    <h2>Helpful Tips</h2>
-    <ul>
-        <li>Track your progress regularly</li>
-        <li>Rest and recover properly</li>
-        <li>Set realistic goals</li>
-        <li>Adapt your plan based on results</li>
-        <li>Stay motivated with community support</li>
-    </ul>
+  <img class="section-img"
+       src="https://images.unsplash.com/photo-1554344058-8d1d1dbc5960?auto=format&fit=crop&w=1200&q=80"
+       alt="Fitness motivation and workout planning" />
+  <h2>Helpful Tips</h2>
+  <ul>
+    <li>Track your progress regularly</li>
+    <li>Rest and recover properly</li>
+    <li>Set realistic goals</li>
+    <li>Adapt your plan based on results</li>
+    <li>Stay motivated with community support</li>
+  </ul>
 </section>
 
 <section id="plans">
-    <!-- Plans / pricing image -->
-    <img class="section-img"
-         src="https://images.unsplash.com/photo-1526401485004-2fa806b5e2ab?auto=format&fit=crop&w=1200&q=80"
-         alt="Fitness planning and notebook">
-    <h2>Choose Your Plan</h2>
+  <img class="section-img"
+       src="https://images.unsplash.com/photo-1526401485004-2fa806b5e2ab?auto=format&fit=crop&w=1200&q=80"
+       alt="Fitness planning and notebook" />
+  <h2>Choose Your Plan</h2>
 
-    <div class="plan">
-        <h3>Basic Plan - Free</h3>
-        <p>Access to beginner workout templates, diet basics, and essential tips.</p>
-        <a href="#" class="btn">Get Started</a>
-    </div>
+  <div class="plan">
+    <h3>Basic Plan - Free</h3>
+    <p>Access to beginner workout templates, diet basics, and essential tips.</p>
+    <a href="#" class="btn">Get Started</a>
+  </div>
 
-    <div class="plan">
-        <h3>Pro Plan - ₹10</h3>
-        <p>Includes personalized workout and diet plans, supplement guides, video tutorials, and advanced transformation strategies.</p>
-        <a href="#" class="btn">Buy Now</a>
-    </div>
+  <div class="plan">
+    <h3>Pro Plan - ₹10</h3>
+    <p>Includes personalized workout and diet plans, supplement guides, video tutorials, and advanced transformation strategies.</p>
+    <a href="#" class="btn">Buy Now</a>
+  </div>
 </section>
 
 <footer>
-    &copy; 2025 Physique Transformation Guide. All rights reserved.
+  &copy; 2025 Physique Transformation Guide. All rights reserved.
 </footer>
+
+<script>
+  const authModal = document.getElementById('authModal');
+  const loginForm = document.getElementById('loginForm');
+  const signupForm = document.getElementById('signupForm');
+  const closeModalButtons = [document.getElementById('closeModal'),document.getElementById('closeModal2')];
+  const showSignup = document.getElementById('showSignup');
+  const showLogin = document.getElementById('showLogin');
+
+  // Show signup form
+  showSignup.addEventListener('click', () => {
+    loginForm.style.display = 'none';
+    signupForm.style.display = 'block';
+  });
+
+  // Show login form
+  showLogin.addEventListener('click', () => {
+    signupForm.style.display = 'none';
+    loginForm.style.display = 'block';
+  });
+
+  // Close modal function
+  function closeModal() {
+    authModal.style.display = 'none';
+  }
+
+  // Add close functionality to close buttons
+  closeModalButtons.forEach(btn => {
+    btn.addEventListener('click', closeModal);
+  });
+
+  // Show modal on page load
+  window.onload = () => {
+    authModal.style.display = 'flex';
+  };
+</script>
 
 </body>
 </html>
